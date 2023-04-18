@@ -5,10 +5,10 @@ import { Layout } from "shared/ui";
 
 import styles from "./styles.module.scss";
 
-const Main = () => (
+const Beers = () => (
   <Layout sidebar={<Sidebar />}>
     <div>123</div>
   </Layout>
 );
 
-export default Main;
+export default Beers;

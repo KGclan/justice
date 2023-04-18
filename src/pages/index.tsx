@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const Main = lazy(() => import("./main"));
+const Beers = lazy(() => import("./beers"));
 
 export const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={<Suspense fallback="Загрузка..."><Main /></Suspense>} />
+      <Route path="/" element={<Suspense fallback="Загрузка..."><Beers /></Suspense>} />
     </Routes>
   );
 };
