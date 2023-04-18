@@ -1,0 +1,62 @@
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 64px;
+  width: 100%;  
+}
+
+.subtitle {
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.chartsWrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+}
+
+.pieAndLine {
+  width: 455px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grayLine {
+  width: 100%;
+  height: 1px;
+  background: rgba(60, 78, 96, 0.08);
+}
+
+.bar, .line, .pie {
+  padding: 32px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bar {
+  width: 671px;
+  height: 506px;
+}
+
+.pie {
+  width: 391px;
+  height: 261px;
+}
+
+.line {
+  width: 391px;
+  height: 156px;
+}

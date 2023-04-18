@@ -1,9 +1,10 @@
 .wrapper {
   display: flex;
+  min-height: 100vh;
+  max-width: 100%;
 }
 
 .main {
-  height: 100%;
-  width: calc(100% - 274px);
+  width: calc(100% - 400px);
   padding: 0 56px;
 }

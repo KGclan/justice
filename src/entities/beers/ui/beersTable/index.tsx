@@ -9,16 +9,17 @@ import {
   styled,
   tableCellClasses,
 } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { RootState } from "app/store/types";
-import { table } from "entities/beers";
+import { beersModel, table } from "entities/beers";
 
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
 
 export const BeersTable = () => {
   const { beers, beersIsLoading } = useSelector((state: RootState) => state.beers);
+  const dispatch = useDispatch();
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -32,9 +33,9 @@ export const BeersTable = () => {
     },
   }));
 
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  const StyledTableRow = styled(TableRow)(() => ({
     "&:nth-of-type(odd)": {
-      backgroundColor: "#F8F8F8",
+      backgroundColor: "#FFFFFF",
     },
     td: {
       border: "none",
@@ -72,7 +73,13 @@ export const BeersTable = () => {
                 <StyledTableCell align="center">{beer.ph}</StyledTableCell>
                 <StyledTableCell align="center">{beer.attenuation_level}</StyledTableCell>
                 <StyledTableCell align="center">
-                  <Link className={styles.link} to={`/${beer.id}`}>Open</Link>
+                  <Link
+                    className={styles.link}
+                    to="/beerStatistics"
+                    onClick={() => dispatch(beersModel.actions.setSelectedBeer(beer))}
+                  >
+                    Open
+                  </Link>
                 </StyledTableCell>
               </StyledTableRow>
             ))
