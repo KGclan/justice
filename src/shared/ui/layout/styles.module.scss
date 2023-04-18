@@ -1,3 +1,9 @@
 .wrapper {
   display: flex;
 }
+
+.main {
+  height: 100%;
+  width: calc(100% - 274px);
+  padding: 0 56px;
+}

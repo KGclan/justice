@@ -10,7 +10,7 @@ interface ILayout {
 export const Layout: React.FC<ILayout> = ({ sidebar, children }) => (
   <div className={styles.wrapper}>
     { sidebar }
-    <main>
+    <main className={styles.main}>
       { children }
     </main>
   </div>

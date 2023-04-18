@@ -1,0 +1,1 @@
+export const HEADER_TITLES = ["Name", "First Brewed", "ABV", "IBU", "EBC", "SRM", "PH", "Attenuation Level", "Actions"];
